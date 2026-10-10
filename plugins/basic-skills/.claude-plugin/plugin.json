@@ -1,0 +1,6 @@
+{
+    "name": "basic-skills",
+    "description": "Basic skills for everyday development tasks, like committing, creating PRs, reviewing code, cleaning up branches, and writing release notes.",
+    "version": "1.0.0",
+    "author": { "name": "Rob Rouleau" }
+}

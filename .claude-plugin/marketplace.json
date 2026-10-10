@@ -1,0 +1,12 @@
+{
+    "name": "rjrnj-skills",
+    "description": "My personal Claude Code skills",
+    "owner": { "name": "Rob Rouleau" },
+    "plugins": [
+        {
+            "name": "basic-skills",
+            "source": "./plugins/basic-skills",
+            "description": "Basic skills for everyday development tasks, like committing, creating PRs, reviewing code, cleaning up branches, and writing release notes."
+        }
+    ]
+}
