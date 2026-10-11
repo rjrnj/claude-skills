@@ -12,7 +12,10 @@ A Claude Code plugin marketplace (`rjrnj-skills`) of personal skills. No build, 
 - `plugins/<plugin>/.claude-plugin/plugin.json`: the plugin manifest (name, description, version, author).
 - `plugins/<plugin>/skills/<skill>/SKILL.md`: one directory per skill. Skills are found by directory convention, so they are not listed in either manifest.
 
-Currently there is one plugin, `basic-skills`, with one skill, `commit`. Its description also mentions PR creation, code review, branch cleanup, and release notes, which are planned skills that don't exist yet.
+Currently there are two plugins:
+
+- `basic-skills`, with one skill, `commit`. Its description also mentions PR creation, code review, branch cleanup, and release notes, which are planned skills that don't exist yet.
+- `github-skills`, with one skill, `github-stars-summary`. It bundles Python helper scripts under `scripts/` that call `gh` through `subprocess`, so the skill works the same from Bash and PowerShell. It requires Python 3 and an authenticated `gh` CLI.
 
 When adding or changing things:
 
@@ -31,4 +34,4 @@ When adding or changing things:
 There is no automated test. To check a change:
 
 - `claude plugin validate .` validates the marketplace and plugin manifests.
-- To try skills, add this directory as a marketplace in Claude Code (`/plugin marketplace add <path-to-repo>`), then install `basic-skills@rjrnj-skills`.
+- To try skills, add this directory as a marketplace in Claude Code (`/plugin marketplace add <path-to-repo>`), then install `basic-skills@rjrnj-skills` or `github-skills@rjrnj-skills`.

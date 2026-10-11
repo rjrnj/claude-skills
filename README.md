@@ -12,11 +12,17 @@ In Claude Code:
    /plugin marketplace add rjrnj/claude-skills
    ```
 
-2. Install the plugin:
+2. Install the plugins you want:
 
    ```
    /plugin install basic-skills@rjrnj-skills
+   /plugin install github-skills@rjrnj-skills
    ```
+
+   | Plugin | Skills | Needs |
+   |---|---|---|
+   | `basic-skills` | `commit` | git |
+   | `github-skills` | `github-stars-summary` | Python 3, an authenticated `gh` CLI |
 
 3. Restart Claude Code if the skills don't show up.
 

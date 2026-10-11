@@ -1,0 +1,6 @@
+{
+    "name": "github-skills",
+    "description": "Skills for exploring GitHub with the gh CLI, like summarizing and categorizing starred repositories.",
+    "version": "1.0.0",
+    "author": { "name": "Rob Rouleau" }
+}

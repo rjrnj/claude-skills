@@ -7,6 +7,11 @@
             "name": "basic-skills",
             "source": "./plugins/basic-skills",
             "description": "Basic skills for everyday development tasks, like committing, creating PRs, reviewing code, cleaning up branches, and writing release notes."
+        },
+        {
+            "name": "github-skills",
+            "source": "./plugins/github-skills",
+            "description": "Skills for exploring GitHub with the gh CLI, like summarizing and categorizing starred repositories."
         }
     ]
 }
