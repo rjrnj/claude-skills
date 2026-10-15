@@ -26,7 +26,7 @@ When adding or changing things:
 
 - Frontmatter: `name`, `description` (says what the skill does and lists trigger phrases like "Use when the user says ..."), optional `argument-hint`, `category`, `tags`, and `allowed-tools`.
 - Skills are written to work in both Bash and PowerShell, so `allowed-tools` lists each permitted command twice, as `Bash(...)` and as `PowerShell(...)`. The skill body also avoids shell-specific quoting (for example, commit messages go through a file with `git commit -F`, never `-m`).
-- `allowed-tools` holds only read-only or low-risk commands. Anything that changes state, like `git commit`, is left out so it prompts for permission, and the skill also asks the user to approve before doing it.
+- `allowed-tools` lists the commands the skill needs to finish its job without permission prompts, and nothing broader. For `commit` that includes `git add` and `git commit` (plus `Write` for the message file), since invoking the skill is the user's approval to commit. Anything the skill never does, like `git push`, stays out so a stray attempt still prompts.
 - The body is a numbered workflow, followed by sections for format rules, edge cases (for example, pre-commit hook failures), and an explicit "Out of scope" list.
 
 ## Testing changes locally
